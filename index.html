@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" onsubmit="check()">
+        <h1>Nationality</h1>
+        <select id="nationality">
+        <option value="">Nationality</option>
+         <option value="pk">Pakistani</option>
+         <option value="in">Indian</option>
+         <option value="fr">France</option>
+         <option value="tu">Turkey</option>
+        </select>
+        
+        <H1>Education</H1>
+        <select id="education">
+            <option value="">Education</option>
+            <option value="md">Middle</option>
+            <option value="mt">Matric</option>
+            <option value="gd">Graduate</option>
+            <option value="ms" >Masters</option>
+           </select>
+
+           <h1>Age</h1>
+           <input type="number" id="age" placeholder="Enter Your Age" required>
+
+           <h1>Height</h1>
+           <input type="number" id="height" placeholder="Enter Your Height" required>
+           <button type="submit">Submit</button>
+        </form>
+        <h1 id="result"></h1>
+
+        <script>
+            function check(){
+                var nationality = document.getElementById('nationality').value;
+                var education = document.getElementById('education').value;
+                var age = document.getElementById('age').value;
+                var height = document.getElementById('height').value;
+                var result = document.getElementById( 'result')
+
+                if(nationality === "pk" && height >= 5.5 && age >=18 && age <=25 || education === "ms" && age <=28 ){
+                    result.innerHTML = "you are selected";
+                } 
+                else{
+                    result.innerHTML = "you are fail";
+                } 
+            
+            
+            
+            }
+
+
+        </script>
+</body>
+</html>
